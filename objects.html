@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <h1>In this page we will learn about objects</h1>
+
+
+<script>
+    const me = {
+        name: "Shaxlo",
+        last_name: "Turayeva",
+        birht_date: '16.02.2000',
+        phone: '+998200072791',
+        age: function(){
+            const part = this.birht_date.split('.');
+            const a = 2024 - Number(part[2])
+            console.log(a)
+            },
+        full_name: function(){
+            const full = this.name +" "+ this.last_name
+            console.log(full)
+        },
+        call_me: function(){
+            console.log(`Call me ${this.phone} 😉`);
+        },
+        keys: function(){
+            const res = Object.keys(this)
+            console.log(`Ushbu object kalitlari: ${res}`);
+        },
+        tabrik: function(){
+            
+        }
+        }
+
+    console.log(me.age());
+    console.log(me.full_name());
+    console.log(me.call_me());
+    console.log(me.keys());
+</script>
+
+
+</body>
+</html>
