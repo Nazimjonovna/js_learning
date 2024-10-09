@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Str</title>
+</head>
+<body>
+    <div>
+        <input id = 'ism' placeholder="Ism:"/><br>
+        <input id = 'familiya' placeholder="Familiya:"/><br>
+        <input id = 'sharif' placeholder="Sharif:"/><br>
+        <input id = 'phone' placeholder="Telefon raqam:"/><br>
+        <input id = 'addres' placeholder="Manzil:"/><br>
+        <button id = 'btn'>Jo'natish</button>
+    </div>
+
+
+    <script>
+        const ism = document.getElementById('ism');
+        const fam = document.getElementById('familiya');
+        const sh = document.getElementById('sharif');
+        const phone = document.getElementById('phone');
+        const addres = document.getElementById('addres');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () =>{
+            ism.remove();
+            fam.remove();
+            
+        })
+    </script>
+
+</body>
+</html>

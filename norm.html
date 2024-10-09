@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norm</title>
+</head>
+<body>
+    <div>
+        <h1 id = 'text'>Calculator</h1>
+        <input id = 'a' placeholder="Birinchi sonni kiriting"/><br>
+        <input id = 'b' placeholder="Ikkinchi sonni kiriting"/><br>
+        <input id = 'o' placeholder="Amalni kiriting"/><br>
+        <button id = 'btn'>Hisobla</button>
+    </div>
+
+
+
+
+    <script>
+            const text = document.getElementById('text');
+            const a = document.getElementById('a');
+            const b = document.getElementById('b');
+            const o = document.getElementById('o');
+            const btn = document.getElementById('btn');
+            let result;
+
+            btn.addEventListener('click', () =>{
+                switch(o.value){
+                    case '+':
+                        result = Number(a.value)+Number(b.value);
+                        break;
+                    case '-':
+                        result = Number(a.value)-Number(b.value);
+                        break;
+                    case '*':
+                        result = Number(a.value)*Number(b.value);
+                        break;
+                    case '/':
+                        result = Number(a.value)/Number(b.value);
+                        break;
+                    default:
+                        result = 'bunday arifmetik amal mavjud emas';
+                        break;
+                }
+                a.remove();
+                b.remove();
+                o.remove();
+                btn.remove();
+                text.textContent = `Natija: ${result}`; 
+            })
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
